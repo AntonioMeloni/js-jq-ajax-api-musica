@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>My Albums</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" charset="utf-8"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.soft32.com%2Fblog%2Fwp-content%2Fuploads%2F2016%2F08%2Fspotify_logo.png&f=1&nofb=1" alt="">
+                <h1>My Albums</h1>
+            </div>
+        </header>
+        <div class="card-container">
+            <!-- <div class="card">
+                <img class="cover"src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                <h3 class="album">NEW JERSEY</h3>
+                <span class="artist">Bon Jovi</span>
+                <span class="year">1988</span>
+            </div> -->
+        </div>
+
+        <script id="card-template" type="text/x-handlebars-template">
+            <div class="card">
+                <img class="cover"src="{{cover}}" alt="">
+                <h3 class="album">{{album}}</h3>
+                <span class="artist">{{artist}}</span>
+                <span class="year">{{year}}</span>
+            </div>
+        </script>
+
+    <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>
