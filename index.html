@@ -14,6 +14,15 @@
                 <h1>My Albums</h1>
             </div>
         </header>
+        <div class="generi">
+            <ul>
+                <li class="active">ALL</li>
+                <li>ROCK</li>
+                <li>POP</li>
+                <li>JAZZ</li>
+                <li>METAL</li>
+            </ul>
+        </div>
         <div class="card-container">
             <!-- <div class="card">
                 <img class="cover"src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
@@ -24,7 +33,7 @@
         </div>
 
         <script id="card-template" type="text/x-handlebars-template">
-            <div class="card">
+            <div class="card" data-genere="{{genere}}">
                 <img class="cover"src="{{cover}}" alt="">
                 <h3 class="album">{{album}}</h3>
                 <span class="artist">{{artist}}</span>

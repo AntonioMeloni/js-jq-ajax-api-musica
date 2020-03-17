@@ -2,6 +2,23 @@
 var source = $("#card-template").html();
 var template = Handlebars.compile(source);
 
+$('.generi').find('li').click(function () {
+    $('.generi').find('li').removeClass('active');
+    $(this).addClass('active');
+    var selectedGen = $(this).text();
+    if (selectedGen == "" || selectedGen == 'ALL'){
+        $('.card').show();
+    }else {
+        $('.card').each(function () {
+            if(selectedGen.toLowerCase() == $(this).data('genere').toLowerCase()){
+                $(this).show();
+            }else{
+                $(this).hide();
+            }
+        })
+    }
+});
+
 $.ajax({
     url:'https://flynn.boolean.careers/exercises/api/array/music',
     method: 'GET',
